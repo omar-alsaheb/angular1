@@ -1,13 +1,17 @@
-<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="signupForm" (ngSubmit)="createAccount()">
   <div class="form-group">
     <label for="name">username</label>
-    <input type="text" name="username" class="form-control" formControlName="Account_ID"  [(ngModel)]="accountId">
+    <input type="text" name="username" class="form-control" formControlName="Account_ID"  >
+    <span *ngIf="this.signupForm.controls['Account_ID'].getError('minlength')" style="color: red;">
+      Username must be at least 5 characters long.
+    </span>
+    <span *ngIf="this.signupForm.controls['Account_ID'].getError('required')" style="color: red;">
+      Username is required.
+    </span>
   </div>
   <div class="form-group">
     <label for="email">password</label>
-    <input type="password" name="password" class="form-control" formControlName="Password"  [(ngModel)]="password">
+    <input type="password" name="password" class="form-control" formControlName="Password" >
   </div>
-
-
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Submit</button>
 </form>

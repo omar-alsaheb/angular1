@@ -1,56 +1,57 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { debounceTime, Subscription } from 'rxjs';
 // import { CustomValidators } from './custome-validators';
 @Component({
   selector: 'app-omar',
   templateUrl: './omar.component.html',
-  styleUrls: ['./omar.component.css']
+  styleUrls: ['./omar.component.css'],
 })
-export class OmarComponent implements OnInit {
-  signupForm: FormGroup;
-
-  constructor(public http:HttpClient) { }
-  accountId:string;
-  password:string;
+export class OmarComponent implements OnInit, OnDestroy {
+  subsciption: Subscription;
+  signupForm: FormGroup = new FormGroup({
+    Account_ID: new FormControl(null, [Validators.required, Validators.minLength(5)]),
+    Password: new FormControl(null, [Validators.required]),
+    IsMd5Password: new FormControl(false),
+    IsAutoConvertMd5: new FormControl(true),
+  });
+  constructor(public http: HttpClient) {}
 
   ngOnInit(): void {
-    this.signupForm= new FormGroup({
-      'Account_ID':new FormControl(null,[Validators.required]),
-      'Password' : new FormControl(null,[Validators.required]),
-      'IsMd5Password' : new FormControl(false),
-      'IsAutoConvertMd5' : new FormControl(true),
-
-    })
 
   }
 
-  onSubmit(){
-    this.validate();
-    // console.log(this.signupForm.value)
-
-
-
+  ngOnDestroy(): void {
+    this.subsciption.unsubscribe();
   }
-  createAccount (){
-    this.http.post('https://51.89.42.197/api/Account/AddNewAccount',this.signupForm.value).subscribe(res=>{
-      this.signupForm.reset();
-      alert('Account Created :)')
-    },error=>{
-      this.signupForm.reset();
-      console.log(error)
-      alert('Account is Exist')
-    })
-  }
-  validate(){
-    if((this.accountId === '' || this.accountId === undefined) || (this.password === '' || this.password === undefined)){
-      alert('Username or Password is required')
+
+
+  createAccount() {
+    if (this.signupForm.invalid) {
+      alert('UserName or password is empty');
+    } else {
+      this.http
+        .post('https://51.89.42.197/api/Account/AddNewAccount', {
+          ...this.signupForm.value,
+          IsMd5Password: false,
+          IsAutoConvertMd5: true,
+        })
+        .subscribe(
+          (res: any) => {
+            this.signupForm.reset();
+            if (res.error) {
+              // console.log(res);
+              alert(res.error);
+            } else {
+              alert('Account Created Successfully');
+            }
+          },
+          (error) => {
+            this.signupForm.reset();
+            console.log(error);
+          }
+        );
     }
-    else {
-      this.createAccount();
-    }
   }
-
 }
-
-
