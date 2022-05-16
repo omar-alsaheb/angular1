@@ -32,7 +32,7 @@ export class OmarComponent implements OnInit, OnDestroy {
       alert('UserName or password is empty');
     } else {
       this.http
-        .post('https://51.89.42.197/api/Account/AddNewAccount', {
+        .post('https://api.alsaheb.xyz/api/Account/AddNewAccount', {
           ...this.signupForm.value,
           IsMd5Password: false,
           IsAutoConvertMd5: true,
