@@ -7,8 +7,8 @@ import { environment } from '../environments/environment';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'angular1';
-  location: Location;
+  title = 'The Lost Paradise';
+  // location: Location;
 
   ngOnInit() {
     // if (environment.production) {

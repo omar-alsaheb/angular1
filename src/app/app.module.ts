@@ -7,12 +7,14 @@ import { OmarComponent } from './omar/omar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    OmarComponent
+    OmarComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

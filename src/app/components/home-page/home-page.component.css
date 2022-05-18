@@ -1,0 +1,43 @@
+.logo {
+    height: 271px;
+}
+.bg-v {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.go-reg{
+    height: 67px;
+    background: linear-gradient(to bottom, #feb900, #ff7900);
+    line-height: 67px;
+    text-align: center;
+    font-size: 36px;
+    color: #562200;
+    font-family: 'Beaufort';
+    font-weight: 700;
+    text-shadow: 0 -1px 1px #ffc47b;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgb(255 124 0 / 50%);
+    padding: 0 15px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 340px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 40px;
+
+}
+.go-reg:hover{
+  color: #111 !important;
+  background: linear-gradient(to top, #feb900, #ff7900);
+}
+a {
+  text-decoration: none;
+  color: #fe9b00;
+  transition: all 200ms ease-in-out;
+}
