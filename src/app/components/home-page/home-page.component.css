@@ -1,35 +1,7 @@
-@font-face {
-	font-family: 'Beaufort';
-    src: url("/assets/fonts/Beaufort.eot");
-	src: local('â˜º'),   url("/assets/fonts/Beaufort.woff") format("woff");
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-	font-family: 'Beaufort';
-    src: url("/assets/fonts/Beaufort-Bold.eot");
-	src: local('â˜º'),   url("/assets/fonts/Beaufort-Bold.woff") format("woff");
-    font-weight: 700;
-    font-display: swap;
-}
-@font-face {
-	font-family: 'Roboto';
-    src: url("/assets/fonts/RobotoRegular.eot");
-	src: local('â˜º'),   url("/assets/fonts/RobotoRegular.woff") format("woff");
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-	font-family: 'Roboto';
-    src: url("/assets/fonts/RobotoBold.eot");
-	src: local('â˜º'),   url("/assets/fonts/RobotoBold.woff") format("woff");
-    font-weight: 700;
-    font-display: swap;
+.logo {
+  height: 271px;
 }
 
-.logo {
-    height: 271px;
-}
 .bg-v {
   position: fixed;
   top: 0;
@@ -39,42 +11,20 @@
   width: 100%;
 }
 
-.go-reg{
-    height: 67px;
-    background: linear-gradient(to bottom, #feb900, #ff7900);
-    line-height: 67px;
-    text-align: center;
-    font-size: 36px;
-    color: #562200;
-    font-family: 'Beaufort';
-    font-weight: 700;
-    text-shadow: 0 -1px 1px #ffc47b;
-    text-transform: uppercase;
-    box-shadow: 0 0 15px rgb(255 124 0 / 50%);
-    padding: 0 15px;
-    overflow: hidden;
-    cursor: pointer;
-    width: 340px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 40px;
-
-}
-.go-reg:hover{
-  color: #111 !important;
-  background: linear-gradient(to top, #feb900, #ff7900);
-}
 a {
   text-decoration: none;
-  color: #fe9b00;
+  color: #000;
   transition: all 200ms ease-in-out;
 }
 
-h1, h2, h3 ,*{
+
+
+h1,
+h2,
+h3,
+* {
   font-family: 'Beaufort';
   margin-bottom: 10px;
-  line-height: 1.2;
   display: block;
   color: #fe9b00;
   text-transform: uppercase;
@@ -82,6 +32,7 @@ h1, h2, h3 ,*{
   transition: all 200ms ease-in-out;
   text-shadow: 0 0 10px rgb(0 0 0 / 50%);
 }
+
 .section-3 {
   display: flex;
   justify-content: center;
@@ -99,6 +50,7 @@ h1, h2, h3 ,*{
   align-content: space-around;
   justify-content: space-between;
 }
+
 .title {
   display: flex;
   justify-content: space-around;
@@ -121,14 +73,14 @@ h1, h2, h3 ,*{
 }
 
 
-.section-4  .raid .pic {
+.section-4 .raid .pic {
   display: block;
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
   width: 219px;
   height: 278px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   position: relative;
 }
 
@@ -141,7 +93,7 @@ h1, h2, h3 ,*{
   left: 0;
   line-height: 1;
   text-shadow: 0 0 10px black;
-  background: linear-gradient(to top, rgba(0,0,0,7), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 7), transparent);
 }
 
 .section-4 .raids .raid p {
@@ -158,7 +110,7 @@ h1, h2, h3 ,*{
   position: relative;
 }
 
-.section-4  .raid {
+.section-4 .raid {
   width: 18%;
   display: inline-block;
   margin: 0 1%;
@@ -175,9 +127,10 @@ h1, h2, h3 ,*{
 }
 
 section.othernew {
-    
+
   height: 739px;
 }
+
 section.othernew .pref {
   display: inline-block;
   width: 31%;
@@ -191,17 +144,64 @@ section.othernew .pref {
   font-family: 'Beaufort';
   text-transform: uppercase;
 }
+
 section.othernew .pref img {
   display: inline-block;
   width: 100px;
   height: 100px;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(254,155,0,0.5);
+  box-shadow: 0 0 10px rgba(254, 155, 0, 0.5);
   float: left;
 }
+
 section.othernew .pref div {
   padding: 10px 20px;
   display: inline-block;
   float: left;
   width: calc(100% - 130px);
+}
+
+
+section.about {
+
+  height: 608px;
+  text-align: center;
+}
+
+section.about header {
+  margin-bottom: 30px;
+}
+
+section.about .content {
+  position: relative;
+}
+
+section.about .content:before,
+section.about .content:after {
+  content: '';
+  position: absolute;
+  width: 176px;
+  height: 176px;
+  /* background: url('../../images/promo/about-sep.png') center center no-repeat; */
+  top: 100px;
+  left: 26%;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+section.about .content:after {
+  left: auto;
+  right: 26%;
+}
+
+section.about .pref {
+  width: 29%;
+  margin: 0 2%;
+  float: left;
+  display: inline-block;
+  height: 160px;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px black;
 }

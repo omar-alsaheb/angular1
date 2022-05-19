@@ -1,4 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+} */
+
+@font-face {
+  font-family: 'Beaufort';
+  src: url("/assets/fonts/Beaufort.eot");
+  src: local('â˜º'), url("/assets/fonts/Beaufort.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Beaufort';
+  src: url("/assets/fonts/Beaufort-Bold.eot");
+  src: local('â˜º'), url("/assets/fonts/Beaufort-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("/assets/fonts/RobotoRegular.eot");
+  src: local('â˜º'), url("/assets/fonts/RobotoRegular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("/assets/fonts/RobotoBold.eot");
+  src: local('â˜º'), url("/assets/fonts/RobotoBold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+.btn {
+  height: 67px;
+  background: linear-gradient(to bottom, #feb900, #ff7900);
+  line-height: 67px;
+  text-align: center;
+  font-size: 36px;
+  color: #562200;
+  font-family: 'Beaufort';
+  font-weight: 700;
+  text-shadow: 0 -1px 1px #ffc47b;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px rgb(255 124 0 / 50%);
+  padding: 0 15px;
+  overflow: hidden;
+  cursor: pointer;
+  width: 340px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 40px;
+
+}
+
+.btn:hover {
+  color: #111 !important;
+  background: linear-gradient(to top, #feb900, #ff7900);
+}
+
+a {
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+
