@@ -27,3 +27,12 @@ input {
     background-position: 10px 50%;
     background-repeat: no-repeat;
 }
+.sign-up-form {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  .sign-up-form h2 {
+    font-size: 5vh;
+    font-family: 'Beaufort';
+}

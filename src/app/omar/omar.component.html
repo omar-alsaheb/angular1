@@ -6,7 +6,7 @@
     You can create your account here to start the epic adventure
   </h3>
 </div>
-<form [formGroup]="signupForm" (ngSubmit)="createAccount()" class="form">
+<form [formGroup]="signupForm" (ngSubmit)="createAccount()" class="form" id="join">
   <div class="form-group">
     <input type="text" name="username" class="form-control" formControlName="Account_ID" placeholder="User Name">
     <!-- <span *ngIf="this.signupForm.controls['Account_ID'].getError('minlength')" style="color: red;">
@@ -17,7 +17,7 @@
     </span> -->
     
     <input type="password" name="password" class="form-control" formControlName="Password" placeholder="Password">
-  <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid" class="btn">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid" class="btn">Create Account</button>
   </div>
 </form>
-<button mat-button (click)="openDialog()">Launch dialog</button>
+

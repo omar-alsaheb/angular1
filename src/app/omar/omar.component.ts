@@ -50,7 +50,8 @@ export class OmarComponent implements OnInit, OnDestroy {
               // console.log(res);
               alert(res.error);
             } else {
-              alert('Account Created Successfully');
+              // alert('Account Created Successfully');
+              this.dialog.open(DialogElementsExampleDialog);
             }
           },
           (error) => {
