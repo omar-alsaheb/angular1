@@ -20,20 +20,25 @@ a {
 .section-3 {
   margin: 7% 0;
 }
+
 h2.welc-title {
   font-size: 4vh;
   text-transform: none;
   color: #d4d4d4;
 }
-.join-title{
+
+.join-title {
   font-size: 6vh;
 }
+
 h2.power-title {
   font-size: 7vh;
 }
+
 h2.power-sub {
   color: #aaa;
 }
+
 h1,
 h2,
 h3 {
@@ -57,10 +62,12 @@ h3 {
   width: 100%;
   justify-content: space-between;
 }
+
 section.sec-2 {
   width: 100%;
   display: inline-block;
 }
+
 .row-1 {
   width: 55%;
   float: inherit;
@@ -71,20 +78,24 @@ section.sec-2 {
   float: left;
   text-align: end;
 }
+
 .row-1 .image-sec2 {
   float: left;
   text-align: left;
   width: 50%;
 }
+
 .row-2 {
   width: 25%;
   float: left;
 }
+
 .image-sec2 {
   width: 50%;
   float: left;
   text-align: end;
 }
+
 .row-2 .sec-2-container-text {
   width: 50%;
   float: left;
@@ -98,51 +109,62 @@ section.sec-2 {
   align-content: space-around;
   justify-content: space-between;
 }
+
 .section-3 .anit-model-sys {
   margin: 0 23px;
 }
+
 .title {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
 }
+
 .plus-minus .title {
   color: #fff;
   font-size: 22px;
   width: 55%;
 }
+
 .plus-minus-list {
   color: #ccc;
   font-family: 'Beaufort';
   margin-top: 4%;
   font-size: 2vh;
 }
+
 .plus-minus-list {
   display: flex;
   justify-content: space-evenly;
   align-content: stretch;
   flex-direction: row;
 }
+
 .content.section-4 .title {
   margin-bottom: 29px;
 }
+
 .content.section-4 .title h2 {
   font-size: 5vh;
 }
+
 .content.section-4 .title span {
   font-size: 2vh;
   color: #ccc;
 }
+
 .raid p {
   color: #ccc;
   padding: 21px 39px;
 }
+
 .content.section-4 {
   width: 100%;
   display: inline-block;
   text-align: center;
   margin: 20px 0;
 }
+
 .section-4 .raid {
   width: 18%;
   display: inline-block;
@@ -211,13 +233,16 @@ section.othernew {
   text-align: center;
 
 }
+
 section.othernew h2 {
   font-size: 4vh;
 }
+
 section.othernew p {
   font-size: 3vh;
   color: #cccc;
 }
+
 section.othernew .pref {
   display: inline-block;
   width: 31%;
@@ -247,12 +272,15 @@ section.othernew .pref div {
   float: left;
   width: calc(100% - 130px);
 }
+
 section.about h2 {
   font-size: 5vh;
 }
+
 section.about p {
   color: #cccc;
 }
+
 section.about {
   text-align: center;
   width: 100%;
@@ -295,4 +323,33 @@ section.about .pref {
   line-height: 1.2;
   margin-bottom: 40px;
   text-shadow: 0 0 10px black;
+}
+
+@media (max-width: 767px) {
+  video#myVideo {
+    display: none;
+  }
+
+  body {
+    background-color: #000 !important;
+  }
+
+  .section-3 {
+    display: none !important;
+  }
+
+  .content.section-4 {
+    display: none !important;
+  }
+
+  section.othernew {
+    display: none !important;
+  }
+
+  section.about {
+    display: none !important;
+  }
+  section.sec-2 {
+    display: none !important;
+}
 }
