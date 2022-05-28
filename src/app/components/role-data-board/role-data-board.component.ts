@@ -6,23 +6,64 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './role-data-board.component.html',
   styleUrls: ['./role-data-board.component.css']
 })
+
 export class RoleDataBoardComponent implements OnInit {
-  localApi="https://localhost:44337";
-  globalApi="api.thelostparadise.club";
+  localApi = "https://localhost:44337";
+  globalApi = "https://api.thelostparadise.club";
 
-  constructor(public http:HttpClient) { }
-  respo:[]=[]
+  constructor(public http: HttpClient) { }
+  
 
-  ngOnInit(): void {
-    // this.http.get('https://localhost:44337/api/Account/GetRoleDataBoard/'+ 5).subscribe((res)=>{
-    // console.log(res)
-    // })
+  displayedColumns: string[] = ['state', 'roleName'];
+  dataSource:any = [];
+  response: [] = []
+  roleDataBoardTableLookup:any= [{
+    typeId: 3,
+    typeName: 'Strength'
+  },
+  {
+    typeId: 4,
+    typeName: 'Dexterity'
+  },
+  {
+    typeId: 5,
+    typeName: 'Stamina'
+  },
+  {
+    typeId: 6,
+    typeName: 'Intelligence'
+  },
+  {
+    typeId: 7,
+    typeName: 'Wisdom'
+  },
+  {
+    typeId: 8,
+    typeName: 'Melee Attack'
+  },
+  {
+    typeId: 9,
+    typeName: 'Magic Attack'
+  },
+  {
+    typeId: 10,
+    typeName: 'Physical Defense'
+  },
+  {
+    typeId: 11,
+    typeName: 'Magical Defense'
   }
- 
-  doSomething($event:any){
-    this.http.get(this.localApi+'/api/Account/GetRoleDataBoard/'+ $event.value).subscribe((res)=>{
-      console.log(res)
-      })
-    console.log($event)
-    }
+  ]
+  ngOnInit(): void {
+    this.http.get(this.globalApi +'/api/Account/GetRoleDataBoard/'+ 4).subscribe((res)=>{
+      this.dataSource = res
+    })
+  }
+
+  doSomething($event: any) {
+    this.http.get(this.globalApi + '/api/Account/GetRoleDataBoard/' + $event.value).subscribe((res) => {
+      this.dataSource = res
+    })
+    console.log($event.value)
+  }
 }

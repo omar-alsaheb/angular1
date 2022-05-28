@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './omar.component.html',
   styleUrls: ['./omar.component.css'],
 })
+
 export class OmarComponent implements OnInit, OnDestroy {
   subsciption: Subscription;
   hide = true;
@@ -22,7 +23,7 @@ export class OmarComponent implements OnInit, OnDestroy {
     IsAutoConvertMd5: new FormControl(true),
   });
   localApi="https://localhost:44337";
-  globalApi="api.thelostparadise.club";
+  globalApi="https://api.thelostparadise.club";
   constructor(public http: HttpClient, public dialog: MatDialog) {}
   openDialog() {
     this.dialog.open(DialogElementsExampleDialog);
