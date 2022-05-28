@@ -14,7 +14,7 @@ export class RoleDataBoardComponent implements OnInit {
   constructor(public http: HttpClient) { }
   
 
-  displayedColumns: string[] = ['state', 'roleName'];
+  displayedColumns: string[] = ['ranking' , 'roleName','state'];
   dataSource:any = [];
   response: [] = []
   roleDataBoardTableLookup:any= [{
@@ -63,6 +63,7 @@ export class RoleDataBoardComponent implements OnInit {
   doSomething($event: any) {
     this.http.get(this.globalApi + '/api/Account/GetRoleDataBoard/' + $event.value).subscribe((res) => {
       this.dataSource = res
+      console.log(res)
     })
     console.log($event.value)
   }
