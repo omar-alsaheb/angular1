@@ -8,13 +8,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { RoleDataBoardComponent } from './components/role-data-board/role-data-board.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     OmarComponent,
-    HomePageComponent
+    HomePageComponent,
+    RoleDataBoardComponent
   ],
   imports: [
     BrowserModule,

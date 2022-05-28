@@ -21,6 +21,8 @@ export class OmarComponent implements OnInit, OnDestroy {
     IsMd5Password: new FormControl(false),
     IsAutoConvertMd5: new FormControl(true),
   });
+  localApi="https://localhost:44337";
+  globalApi="api.thelostparadise.club";
   constructor(public http: HttpClient, public dialog: MatDialog) {}
   openDialog() {
     this.dialog.open(DialogElementsExampleDialog);
@@ -37,7 +39,7 @@ export class OmarComponent implements OnInit, OnDestroy {
       alert('UserName or password is empty');
     } else {
       this.http
-        .post('https://api.romoldschool.uk/api/Account/AddNewAccount', {
+        .post(this.globalApi+'/api/Account/AddNewAccount', {
           ...this.signupForm.value,
           IsMd5Password: false,
           IsAutoConvertMd5: true,

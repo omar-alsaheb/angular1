@@ -8,13 +8,8 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent implements OnInit{
   title = 'The Lost Paradise';
-  // location: Location;
 
   ngOnInit() {
-    // if (environment.production) {
-    //   if (location.protocol === 'http:') {
-    //     window.location.href = location.href.replace('http', 'https');
-    //   }
-    // }
+
   }
 }
