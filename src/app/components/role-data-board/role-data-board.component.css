@@ -1,0 +1,39 @@
+.table td {
+    color: #ffff !important;
+}
+.table th {
+    color: white !important;
+}
+
+.table {
+    background-color: #323232;
+}
+
+.table th {
+    border-color: #ffff !important;
+}
+.table tr {
+    border-color: red !important;
+}
+
+.select-des {
+    /* float: left; */
+    text-align: center;
+}
+
+.table-select mat-label {
+    color: #fff;
+}
+.table-select {
+    background-color: #323232;
+}
+
+.table-des table {
+    margin: 0 auto;
+}
+
+.full-table {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 21px;
+}

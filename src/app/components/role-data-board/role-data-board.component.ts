@@ -14,7 +14,7 @@ export class RoleDataBoardComponent implements OnInit {
   constructor(public http: HttpClient) { }
   
 
-  displayedColumns: string[] = ['ranking' , 'roleName','state'];
+  displayedColumns: string[] = ['ranking' , 'roleName','stats'];
   dataSource:any = [];
   response: [] = []
   roleDataBoardTableLookup:any= [{
